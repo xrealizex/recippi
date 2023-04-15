@@ -26,7 +26,6 @@ services:
       context: ./frontend/
       dockerfile: Dockerfile
     volumes:
-      - ./frontend:/frontend
-    command: sh -c "cd app &&PORT=3000 yarn start"
+      - ./frontend/app:/frontend
     ports:
       - "3000:3000"
